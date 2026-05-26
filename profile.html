@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sangeetha Portfolio</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b1a3a; /* navy blue */
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#08142e;
+    position:sticky;
+    top:0;
+}
+
+nav h2{
+    color:#c9d0d8;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li{
+    cursor:pointer;
+}
+
+nav ul li:hover{
+    color:#1264c2;
+}
+
+/* HOME */
+.home{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 10%;
+    min-height:90vh;
+}
+
+.home-text{
+    max-width:50%;
+}
+
+.home-text h1{
+    font-size:50px;
+    color:#ffffff;
+}
+
+.home-text h1 span{
+    color:#4ea1ff;
+}
+
+.home-text p{
+    margin-top:15px;
+    font-size:20px;
+    color:#cfd8ff;
+}
+
+/* PROFILE IMAGE */
+.home-img img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #4ea1ff;
+    box-shadow:0 0 20px rgba(78,161,255,0.5);
+}
+
+/* SECTIONS */
+section{
+    padding:60px 10%;
+}
+
+h2{
+    margin-bottom:30px;
+    color:#4ea1ff;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* SKILLS */
+/* SKILL BAR DESIGN */
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #cfd8ff;
+}
+
+.bar {
+    width: 100%;
+    height: 14px;
+    background: #12264d;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#about p {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d7e3ff;
+    max-width: 750px;
+    margin: 0 auto 20px;
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.03);
+    border-left: 4px solid #4ea1ff;
+    border-radius: 8px;
+}
+.fill {
+    height: 100%;
+    color: white;
+    font-size: 10px;
+    text-align: right;
+    padding-right: 8px;
+    line-height: 14px;
+    border-radius: 20px;
+    animation: load 2s ease-in-out;
+}
+
+/* COLORS */
+.html { width: 90%; background:   #1192ce; }
+.css { width: 85%; background:  #1192ce; }
+.js { width: 75%; background:  #1192ce;  }
+.react { width: 70%; background:  #1192ce; }
+.bootstrap { width: 80%; background: #1192ce; }
+.github { width: 85%; background: #1192ce;  }
+
+/* ANIMATION */
+@keyframes load {
+    from { width: 0; }
+}
+
+.card{
+    background:#12264d;
+    padding:20px;
+    text-align:center;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#183a75;
+}
+
+/* WEBSITES */
+.web-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.web-card i{
+    font-size:30px;
+    margin-bottom:10px;
+    color:#4ea1ff;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#08142e;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Sangeetha</h2>
+    <ul>
+         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#websites">Websites</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<div class="home">
+
+    <!-- LEFT TEXT -->
+    <div class="home-text">
+        <h1>Hi, I'm <span>Sangeetha</span></h1>
+        <p>Frontend Developer | Web Developer</p>
+        <p>I build modern, responsive and creative websites using HTML, CSS and JavaScript.</p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="home-img">
+        <img src="https://i.ibb.co/4pDNDk1/girl.png" alt="profile">
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I’m <b>Sangeetha</b>, a passionate <b>Frontend Developer</b> and aspiring full-stack web developer.<br>
+        I enjoy building clean, responsive, and user-friendly websites using HTML, CSS, and JavaScript.
+    </p>
+
+    <br>
+
+    <p>
+        I love turning creative ideas into real web applications. My goal is to create websites that are not only<br>
+        visually appealing but also fast, accessible, and easy to use for everyone.
+    </p>
+
+    <br>
+
+    <p>
+        I am currently improving my skills in <b>React</b> and modern UI design. I also enjoy learning new tools<br>
+        and technologies that help me become a better developer every day.
+    </p>
+
+    <br>
+
+    <p>
+        When I’m not coding, I like exploring new designs, watching tech tutorials, and improving my problem-solving skills.<br>
+
+        I believe consistency and practice are the keys to becoming a successful developer.
+    </p>
+</section>
+<!-- SKILLS -->
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="bar"><div class="fill html">90%</div></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="bar"><div class="fill css">85%</div></div>
+    </div>
+
+    <div class="skill">
+        <p>JavaScript</p>
+        <div class="bar"><div class="fill js">75%</div></div>
+    </div>
+
+    <div class="skill">
+        <p>React</p>
+        <div class="bar"><div class="fill react">70%</div></div>
+    </div>
+
+    <div class="skill">
+        <p>Bootstrap</p>
+        <div class="bar"><div class="fill bootstrap">80%</div></div>
+    </div>
+
+    <div class="skill">
+        <p>GitHub</p>
+        <div class="bar"><div class="fill github">85%</div></div>
+    </div>
+</section>
+<!-- FAVORITE WEBSITES -->
+<section id="websites">
+    <h2>Favorite Websites</h2>
+    <div class="web-grid">
+
+        <div class="card web-card">
+            <i class="fa-brands fa-youtube"></i>
+            <p>YouTube</p>
+        </div>
+
+        <div class="card web-card">
+            <i class="fa-brands fa-github"></i>
+            <p>GitHub</p>
+        </div>
+
+        <div class="card web-card">
+            <i class="fa-brands fa-google"></i>
+            <p>Google</p>
+        </div>
+
+        <div class="card web-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <p>LinkedIn</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Sangeetha | Frontend Developer
+</footer>
+
+</body>
+</html>
