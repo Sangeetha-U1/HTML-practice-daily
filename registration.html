@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration Form</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:linear-gradient(to right,#dbeafe,#eff6ff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:15px;
+}
+
+/* MAIN CONTAINER */
+.container{
+  width:100%;
+  max-width:820px;
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  overflow:hidden;
+}
+
+/* HEADER */
+.header{
+  background:navy;
+  color:white;
+  text-align:center;
+  padding:16px;
+}
+
+.header h1{
+  font-size:24px;
+}
+
+.header p{
+  margin-top:4px;
+  font-size:13px;
+}
+
+/* STEPS */
+.steps{
+  display:flex;
+  justify-content:space-around;
+  background:#e0f2fe;
+  padding:10px;
+  flex-wrap:wrap;
+}
+
+.step{
+  text-align:center;
+  font-size:13px;
+  font-weight:bold;
+  color:#1e293b;
+}
+
+.step i{
+  display:block;
+  color:#2563eb;
+  margin-bottom:5px;
+  font-size:16px;
+}
+
+/* FORM */
+form{
+  padding:15px;
+}
+
+/* ROWS */
+.row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.row-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+/* SECTION BOX */
+.section{
+  border:1px solid #dbeafe;
+  border-radius:10px;
+  padding:12px;
+  background:#f8fbff;
+}
+
+.section h2{
+  color:navy;
+  margin-bottom:12px;
+  font-size:16px;
+  border-left:4px solid #2563eb;
+  padding-left:8px;
+}
+
+/* INPUTS */
+.input-box{
+  margin-bottom:10px;
+}
+
+.input-box label{
+  display:block;
+  margin-bottom:5px;
+  font-size:13px;
+  font-weight:bold;
+  color:#1e293b;
+}
+
+.input-box label i{
+  color:#2563eb;
+  margin-right:5px;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+  width:100%;
+  padding:8px;
+  border:1px solid #cbd5e1;
+  border-radius:7px;
+  outline:none;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 6px rgba(37,99,235,0.3);
+}
+
+textarea{
+  resize:none;
+}
+
+/* GENDER */
+.gender{
+  display:flex;
+  gap:10px;
+  margin-top:5px;
+  font-size:13px;
+}
+
+/* PROFILE UPLOAD */
+.upload-box{
+  text-align:center;
+}
+
+.upload-box img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  border:3px solid #2563eb;
+  margin-bottom:8px;
+  object-fit:cover;
+}
+
+/* BUTTON */
+.btn{
+  text-align:center;
+  margin-top:18px;
+}
+
+.btn button{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:10px 26px;
+  border-radius:8px;
+  font-size:15px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn button:hover{
+  background:navy;
+}
+
+.btn i{
+  margin-right:6px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .row{
+    grid-template-columns:1fr;
+  }
+
+  .row-2{
+    grid-template-columns:1fr;
+  }
+
+}
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1><i class="fa-solid fa-user-graduate"></i> Student Registration Form</h1>
+    <p>Fill all details carefully</p>
+  </div>
+
+  <!-- Steps -->
+  <div class="steps">
+
+    <div class="step">
+      <i class="fa-solid fa-user"></i>
+      Personal
+    </div>
+
+    <div class="step">
+      <i class="fa-solid fa-address-book"></i>
+      Contact
+    </div>
+
+    <div class="step">
+      <i class="fa-solid fa-book"></i>
+      Academic
+    </div>
+
+    <div class="step">
+      <i class="fa-solid fa-lock"></i>
+      Account
+    </div>
+
+  </div>
+
+  <form>
+
+    <!-- FIRST ROW -->
+    <div class="row">
+
+      <!-- Personal -->
+      <div class="section">
+
+        <h2>Personal Info</h2>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-user"></i> Full Name</label>
+          <input type="text" placeholder="Enter full name">
+        </div>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-venus-mars"></i> Gender</label>
+
+          <div class="gender">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contact -->
+      <div class="section">
+
+        <h2>Contact Info</h2>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-envelope"></i> Email</label>
+          <input type="email" placeholder="Enter email">
+        </div>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-phone"></i> Phone</label>
+          <input type="tel" placeholder="Enter number">
+        </div>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-location-dot"></i> Address</label>
+          <textarea rows="2"></textarea>
+        </div>
+
+      </div>
+
+      <!-- Academic -->
+      <div class="section">
+
+        <h2>Academic Info</h2>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-book-open"></i> Course</label>
+
+          <select>
+            <option>Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>MBA</option>
+            <option>MCA</option>
+          </select>
+        </div>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-school"></i> College</label>
+          <input type="text" placeholder="College name">
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SECOND ROW -->
+    <div class="row-2">
+
+      <!-- Account -->
+      <div class="section">
+
+        <h2>Account Info</h2>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-user-lock"></i> Username</label>
+          <input type="text" placeholder="Username">
+        </div>
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-key"></i> Password</label>
+          <input type="password" placeholder="Password">
+        </div>
+
+      </div>
+
+      <!-- Upload -->
+      <div class="section upload-box">
+
+        <h2>Profile Upload</h2>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+        <div class="input-box">
+          <label><i class="fa-solid fa-image"></i> Upload Picture</label>
+          <input type="file">
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div class="btn">
+      <button type="submit">
+        <i class="fa-solid fa-paper-plane"></i>
+        Register Now
+      </button>
+    </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>
